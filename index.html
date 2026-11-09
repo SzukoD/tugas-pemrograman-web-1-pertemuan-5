@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Dafa Dwi Saputra</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+    body {
+      background: #efe9dc; 
+      color: #16130f;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    ::selection { background: var(--aksen); color: var(--kertas); }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .atas {
+      border-bottom: 1px solid rgba(22, 19, 15, 0.22) ;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .atas .wrap {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .atas span:last-child { color: #e8431f; }
+
+    .hero {
+      padding: 34px 0 28px;
+      border-bottom: 1px solid rgba(22, 19, 15, 0.22);
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .label::before {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      background: #e8431f;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+      max-width: 11ch;
+    }
+    h1 em {
+      font-style: normal;
+      color: #e8431f;
+    }
+
+    .hero-bawah {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 22px;
+      align-items: end;
+    }
+    .hero-bawah p {
+      max-width: 44ch;
+    }
+
+    .tombol-wrap { justify-self: end; text-align: right; }
+
+    button {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #efe9dc;
+      background: #16130f;
+      border: 2px solid #16130f;
+      padding: 10px 18px;
+      cursor: pointer;
+      box-shadow: 5px 5px 0 #e8431f;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 #e8431f;
+    }
+    button:active {
+      transform: translate(4px, 4px);
+      box-shadow: 1px 1px 0 #e8431f;
+    }
+    button:focus-visible {
+      outline: 3px solid #e8431f;
+      outline-offset: 4px;
+    }
+
+  
+    .waktu {
+      border-bottom: 1px solid rgba(22, 19, 15, 0.22);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+    }
+    .waktu.tampil { max-height: 320px; }
+    .waktu .wrap { padding-top: 40px; padding-bottom: 44px; }
+    .waktu small {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    #jam {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 10vw, 7.5rem);
+      line-height: 1;
+      color: #e8431f;
+      font-variant-numeric: tabular-nums;
+    }
+    #tanggal {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+
+    .isi {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid rgba(22, 19, 15, 0.22);
+    }
+    .kolom {
+      padding: 28px 20px 30px;
+      border-right: 1px solid rgba(22, 19, 15, 0.22);
+    }
+    .kolom:first-child { padding-left: 0; }
+    .kolom:last-child { border-right: none; padding-right: 0; }
+
+    .no {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-size: 2.3rem;
+      line-height: 1;
+      color: #e8431f;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+ 
+
+  
+    @media (max-width: 760px) {
+      .hero { padding: 38px 0 34px; }
+      .hero-bawah { grid-template-columns: 1fr; margin-top: 44px; }
+      .tombol-wrap { justify-self: start; text-align: left; }
+      .isi { grid-template-columns: 1fr; }
+      .kolom,
+      .kolom:first-child,
+      .kolom:last-child {
+        padding: 36px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(22, 19, 15, 0.22);
+      }
+      .kolom:last-child { border-bottom: none; }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="atas">
+    <div class="wrap">
+      <span>M Dafa Dwi Saputra</span>
+      <span>Tugas Pemrograman Web</span>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>Satu file tiga <em>bahasa.</em></h1>
+
+      <div class="hero-bawah">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum suscipit expedita quia nihil adipisci voluptatum corrupti et eum consectetur? Similique?
+        </p>
+        <div class="tombol-wrap">
+          <button id="tombol" type="button">Cek jam sekarang -></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="waktu" id="hasil" aria-live="polite">
+    <div class="wrap">
+      <small>Waktu saat ini</small>
+      <div id="jam">--:--:--</div>
+      <div id="tanggal"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="isi">
+      <article class="kolom">
+        <span class="no">01</span>
+        <p>
+          HTML adalah bahasa markup standar yang digunakan untuk membangun struktur dasar dan mengatur konten pada halaman web, 
+          bertindak seperti kerangka atau fondasi bangunan yang menentukan tata letak teks, gambar, video, dan tautan 
+          agar dapat dibaca serta diterjemahkan secara visual oleh peramban web browser. 
+        </p>
+      </article>
+
+      <article class="kolom">
+        <span class="no">02</span>
+        <p>
+          CSS adalah bahasa desain yang digunakan untuk mengatur tampilan, gaya, 
+          dan tata letak visual dari sebuah halaman web yang sebelumnya telah distrukturkan oleh HTML.
+        </p>
+      </article>
+
+      <article class="kolom">
+        <span class="no">03</span>
+        <p>
+          JavaScript adalah bahasa pemrograman tingkat tinggi yang digunakan untuk memberikan interaktivitas, 
+          logika, dan fungsi dinamis pada sebuah halaman web.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    var tombol = document.getElementById("tombol");
+    var hasil = document.getElementById("hasil");
+    var jam = document.getElementById("jam");
+    var tanggal = document.getElementById("tanggal");
+    var pewaktu = null;
+
+    function perbarui() {
+      var sekarang = new Date();
+      jam.textContent = sekarang.toLocaleTimeString("id-ID", { hour12: false })
+        .replace(/\./g, ":");
+      tanggal.textContent = sekarang.toLocaleDateString("id-ID", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+      });
+    }
+
+    tombol.addEventListener("click", function () {
+      perbarui();
+      hasil.classList.add("tampil");
+      tombol.innerHTML = "Jam sudah muncul";
+      if (!pewaktu) {
+        pewaktu = setInterval(perbarui, 1000);
+      }
+      hasil.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  </script>
+</body>
+</html>
