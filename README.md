@@ -18,8 +18,8 @@ Universitas Teknologi Bandung · 2026
 
 ### Preview
 
-![Website Preview](screenshot/ss1.png)
-![Website Preview](screenshot/ss2.png)
+![Website Preview](screenshoot/ss1.png)
+![Website Preview](screenshoot/ss2.png)
 
 ### About
 
