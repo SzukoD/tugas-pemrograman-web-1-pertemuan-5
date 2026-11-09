@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# Satu File, Tiga Bahasa.
+# Tugas Pemrograman Web 1 Pertemnuan 5.
 
 *A simple web project built with HTML, CSS, and JavaScript.*
 
@@ -18,7 +18,8 @@ Universitas Teknologi Bandung · 2026
 
 ### Preview
 
-![Website Preview](screenshots/preview.png)
+![Website Preview](screenshot/ss1.png)
+![Website Preview](screenshot/ss2.png)
 
 ### About
 
